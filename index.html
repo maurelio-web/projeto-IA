@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub de Estudos - Centralizador de Materiais</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones externos para facilitar a identificação visual -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Cabeçalho Principal -->
+        <header class="app-header">
+            <div class="header-info">
+                <span class="subject-tag">Biologia</span>
+                <h1>Aula de Genética: Leis de Mendel</h1>
+                <p class="subtitle">Todos os seus materiais reunidos em um só lugar</p>
+            </div>
+            <div class="progress-container">
+                <span id="progress-text">0% Concluído</span>
+                <div class="progress-bar"><div id="progress-fill"></div></div>
+            </div>
+        </header>
+
+        <!-- Filtros Rápidos -->
+        <section class="filter-section">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="pdf"><i class="fa-solid fa-file-pdf"></i> PDFs</button>
+            <button class="filter-btn" data-filter="video"><i class="fa-solid fa-video"></i> Vídeos</button>
+            <button class="filter-btn" data-filter="image"><i class="fa-solid fa-image"></i> Fotos da Lousa</button>
+            <button class="filter-btn" data-filter="note"><i class="fa-solid fa-note-sticky"></i> Anotações</button>
+        </section>
+
+        <!-- Grid de Materiais (O Hub) -->
+        <main class="materials-grid">
+            
+            <!-- Card 1: PDF -->
+            <div class="material-card" data-type="pdf">
+                <div class="card-checkbox">
+                    <input type="checkbox" class="status-check" aria-label="Marcar como lido">
+                </div>
+                <div class="card-icon pdf-icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Apostila Capítulo 4.pdf</h3>
+                    <p>Material oficial da escola com exercícios de fixação.</p>
+                    <span class="meta-info">Adicionado em: 20/10</span>
+                </div>
+                <a href="#" class="action-btn" title="Abrir arquivo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- Card 2: Vídeo -->
+            <div class="material-card" data-type="video">
+                <div class="card-checkbox">
+                    <input type="checkbox" class="status-check" aria-label="Marcar como assistido">
+                </div>
+                <div class="card-icon video-icon">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Videoaula: Primeira Lei de Mendel</h3>
+                    <p>Link do canal do YouTube com resumo visual prático.</p>
+                    <span class="meta-info">Duração: 15 min</span>
+                </div>
+                <a href="#" class="action-btn" title="Assistir vídeo"><i class="fa-solid fa-play"></i></a>
+            </div>
+
+            <!-- Card 3: Foto da Lousa -->
+            <div class="material-card" data-type="image">
+                <div class="card-checkbox">
+                    <input type="checkbox" class="status-check" aria-label="Marcar como revisado">
+                </div>
+                <div class="card-icon image-icon">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Foto da Lousa - Quadro de Cruzamentos</h3>
+                    <p>Captura da lousa do professor tirada no fim da aula de terça.</p>
+                    <span class="meta-info">Alta resolução</span>
+                </div>
+                <a href="#" class="action-btn" title="Ver foto"><i class="fa-solid fa-eye"></i></a>
+            </div>
+
+            <!-- Card 4: Anotação Pessoal -->
+            <div class="material-card" data-type="note">
+                <div class="card-checkbox">
+                    <input type="checkbox" class="status-check" aria-label="Marcar como revisado">
+                </div>
+                <div class="card-icon note-icon">
+                    <i class="fa-solid fa-note-sticky"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Meus Macetes para a Prova</h3>
+                    <p>Anotações em texto com os termos dominância e recessividade.</p>
+                    <span class="meta-info">Editado ontem</span>
+                </div>
+                <a href="#" class="action-btn" title="Editar nota"><i class="fa-solid fa-pen"></i></a>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
